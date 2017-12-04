@@ -1,9 +1,10 @@
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
   //root file for the client/browser app
-  entry:'./src/client/client.js',
+  entry: './src/client/client.js',
 
   //output file and its location
   output: {
@@ -35,7 +36,16 @@ module.exports = {
             ]
           ]
         }
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('css-loader!postcss-loader'),
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin('public/style2.css', {
+      allChunks: true,
+    })
+  ]
 };

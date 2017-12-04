@@ -1,48 +1,69 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const Header = ({ auth }) => {
+class Header extends Component {
+  componentDidMount() {
 
-  const authButton = auth ? (
-    <a href="/api/logout">Logout</a>
-  ) : (
-    <a href="/api/auth/google">Login</a>
-  );
+  }
 
-  return (
-    <header>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand center" href="/">
-          <img src="/starenio.webp" title="Το Σταρένιο" alt="Το Σταρένιο" />
-        </a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/products">Τούρτες</a>
-            </li>
-          </ul>
-          <form className="form-inline my-2 my-lg-0">
-            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+  render() {
+    const authButton = this.props.auth ? (
+      <a href="/api/logout">Logout</a>
+    ) : (
+      <a href="/api/auth/google">Login</a>
+    );
+    return (
+      <header>
+        <nav className="navbar navbar-expand-md navbar-light">
+          <a className="navbar-brand center" href="/">
+            <img
+              src="/media/to_starenio.svg"
+              title="Το Σταρένιο"
+              alt="Το Σταρένιο"
+              height="80"
+              width="185"
+            />
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  <img src="media/tourtes_genethlion.svg" alt="Τούρτες Γενεθλίων" height="50px" />
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/products">Τούρτες</a>
+              </li>
+            </ul>
+            <form className="form-inline my-2 my-lg-0">
+              <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+              <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+
+        <Link to="/">Starenio </Link>
+        <div>
+          <Link to="/users">Users</Link>
+          <Link to="/admins">Admins</Link>
+          {authButton}
         </div>
-      </nav>
-
-      <Link to="/">Starenio </Link>
-      <div>
-        <Link to="/users">Users</Link>
-        <Link to="/admins">Admins</Link>
-        {authButton}
-      </div>
-    </header>
-  );
+      </header>
+    );
+  }
 };
 
 function mapStateToProps({ auth }) {

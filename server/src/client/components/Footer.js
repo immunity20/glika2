@@ -6,11 +6,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <Link to="/">Starenio </Link>
-      <div>
-        <Link to="/users">Users</Link>
-        <Link to="/admins">Admins</Link>
-      </div>
+      <img src="media/products/bob_300.jpg" alt="bob" />
     </footer>
   );
 };
