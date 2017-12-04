@@ -1,0 +1,5 @@
+server/node_modules/
+api_v2/node_modules/
+api_v2/build/bundle.js
+api_v2/src/config/
+
