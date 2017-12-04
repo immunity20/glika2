@@ -39205,9 +39205,9 @@ var Header = function (_Component) {
                 'li',
                 { className: 'nav-item' },
                 _react2.default.createElement(
-                  'a',
-                  { className: 'nav-link', href: '/' },
-                  _react2.default.createElement('img', { src: 'media/tourtes_genethlion.svg', alt: '\u03A4\u03BF\u03CD\u03C1\u03C4\u03B5\u03C2 \u0393\u03B5\u03BD\u03B5\u03B8\u03BB\u03AF\u03C9\u03BD', height: '50px' })
+                  _reactRouterDom.Link,
+                  { className: 'nav-link', to: '/products' },
+                  _react2.default.createElement('img', { src: 'media/tourtes_genethlion.svg', alt: '\u03A4\u03BF\u03CD\u03C1\u03C4\u03B5\u03C2 \u0393\u03B5\u03BD\u03B5\u03B8\u03BB\u03AF\u03C9\u03BD', title: '\u03A4\u03BF\u03CD\u03C1\u03C4\u03B5\u03C2 \u0393\u03B5\u03BD\u03B5\u03B8\u03BB\u03AF\u03C9\u03BD', height: '70', width: '70' })
                 )
               ),
               _react2.default.createElement(
@@ -39216,7 +39216,7 @@ var Header = function (_Component) {
                 _react2.default.createElement(
                   'a',
                   { className: 'nav-link', href: '/products' },
-                  '\u03A4\u03BF\u03CD\u03C1\u03C4\u03B5\u03C2'
+                  _react2.default.createElement('img', { src: 'media/glika.svg', alt: '\u0393\u03BB\u03C5\u03BA\u03AC', title: 'glika', height: '70', width: '70' })
                 )
               )
             ),

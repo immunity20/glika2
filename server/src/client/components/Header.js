@@ -40,12 +40,14 @@ class Header extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  <img src="media/tourtes_genethlion.svg" alt="Τούρτες Γενεθλίων" height="50px" />
-                </a>
+                <Link className="nav-link" to="/products">
+                  <img src="media/tourtes_genethlion.svg" alt="Τούρτες Γενεθλίων" title="Τούρτες Γενεθλίων" height="70" width="70" />
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/products">Τούρτες</a>
+                <a className="nav-link" href="/products">
+                  <img src="media/glika.svg" alt="Γλυκά" title="glika" height="70" width="70"/>
+                </a>
               </li>
             </ul>
             <form className="form-inline my-2 my-lg-0">

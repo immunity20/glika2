@@ -8,7 +8,11 @@
     "_comment": "error in windows cmd had to remove \"build..\" from dev:server",
     "dev:server": "nodemon --watch build --exec node build/bundle.js",
     "dev:build-server": "webpack --config webpack.server.js --watch",
-    "dev:build-client": "webpack --config webpack.client.js --watch"
+    "dev:build-client": "webpack --config webpack.client.js --watch",
+    "prod": "npm-run-all --parallel prod:*",
+    "prod:server": "nodemon --watch build --exec node build/bundle.js",
+    "prod:build-server": "webpack -p --config webpack.server.js --watch",
+    "prod:build-client": "webpack -p --config webpack.client.js --watch"
   },
   "author": "immunity20",
   "license": "GNU PL3",
@@ -24,7 +28,7 @@
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-0": "6.24.1",
     "bootstrap": "^4.0.0-beta.2",
-    "compression": "1.7.0",
+    "compression": "^1.7.0",
     "concurrently": "3.5.0",
     "css-loader": "^0.28.7",
     "express": "4.15.4",

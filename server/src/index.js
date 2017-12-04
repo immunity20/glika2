@@ -1,6 +1,7 @@
 //  polyfill for express (es6/7 to es5)
 import 'babel-polyfill';
 import express from 'express';
+import compression from 'compression';
 import proxy from 'express-http-proxy';
 import { matchRoutes } from 'react-router-config';
 import Routes from './client/routes';
@@ -8,7 +9,7 @@ import renderer from './helpers/renderer';
 import createStore from './helpers/createStore';
 
 const app = express();
-
+app.use(compression());
 //  proxy on server renderer to api server
 app.use('/api', proxy('http://localhost:7070/', {
   proxyReqOptDecorator(opts) {
