@@ -38,7 +38,7 @@ export default (req, store, context) => {
         else window.addEventListener('load', cb2);
     </script>
     </head>
-    <body style="margin:0px;padding:0px;">
+    <body style="margin:0px;padding:0px;background: #fff999;">
     <div id="root">${content}</div>
     <script>
     window.INITIAL_STATE = ${serialize(store.getState())}
