@@ -16,8 +16,8 @@ class Header extends Component {
     );
     return (
       <header>
-        <nav className="navbar navbar-expand-md navbar-light">
-          <a className="navbar-brand center" href="/">
+        <nav className="navbar navbar-expand-md navbar-light" id="topmenu">
+          <Link className="navbar-brand center" to="/">
             <img
               src="/media/to_starenio.svg"
               title="Το Σταρένιο"
@@ -25,7 +25,7 @@ class Header extends Component {
               height="80"
               width="185"
             />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -56,17 +56,10 @@ class Header extends Component {
             </form>
           </div>
         </nav>
-
-        <Link to="/">Starenio </Link>
-        <div>
-          <Link to="/users">Users</Link>
-          <Link to="/admins">Admins</Link>
-          {authButton}
-        </div>
       </header>
     );
   }
-};
+}
 
 function mapStateToProps({ auth }) {
   return { auth };

@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
 
   return (
-    <footer>
-      <img src="media/products/bob_300.jpg" alt="bob" />
-    </footer>
+    <footer />
   );
 };
 

@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getProducts } from '../../actions/product.actions';
+import ProductListItem from './ProductListItem';
 
 class ProductList extends Component {
   componentDidMount() {
-    this.props.products
+    this.props.getProducts();
   }
 
   //  return users
   renderProducts() {
-    return this.props.products.map(product => <li key={product.id}>{product.title}</li>);
+    return this.props.products.map((product) => {
+      return <ProductListItem product={product} key={product._id} />;
+    });
   }
 
   render() {
     return (
-      <div>
-        <div>omg omg users:</div>
-        <ul>{this.renderProducts()}</ul>
+      <div className="container py-2">
+        <div className="row">
+          {this.renderProducts()}
+        </div>
       </div>
     );
   }

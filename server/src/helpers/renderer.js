@@ -20,7 +20,7 @@ export default (req, store, context) => {
   <html>
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>.navbar { height:80px; }</style>
+    <style>.navbar { height:92px;background:#fff999;border-bottom: 2px solid rgb(237, 108, 22); }</style>
     <script>
       var cb = function() {
       var l = document.createElement('link'); l.rel = 'stylesheet';
@@ -49,6 +49,10 @@ export default (req, store, context) => {
     <script src="bundle.js"></script>
     <noscript>    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/custom.css"></noscript>
+    <script> window.onload = function() {
+      document.getElementById('topmenu').style.height = "";
+    }
+    </script>
  </body>
   </html>`;
 };
