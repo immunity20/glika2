@@ -39337,11 +39337,6 @@ var UserList = function (_Component) {
         'div',
         null,
         _react2.default.createElement(
-          'div',
-          null,
-          'omg omg users:'
-        ),
-        _react2.default.createElement(
           'ul',
           null,
           this.renderUsers()

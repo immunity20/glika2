@@ -50,7 +50,7 @@ export default (req, store, context) => {
     <noscript>    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/custom.css"></noscript>
     <script> window.onload = function() {
-      document.getElementById('topmenu').style.height = "";
+      document.getElementById('topmenu').style.height = "auto";
     }
     </script>
  </body>

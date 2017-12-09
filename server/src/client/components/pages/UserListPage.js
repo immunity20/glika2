@@ -15,7 +15,6 @@ class UserList extends Component {
   render() {
     return (
       <div>
-        <div>omg omg users:</div>
         <ul>{this.renderUsers()}</ul>
       </div>
     );
