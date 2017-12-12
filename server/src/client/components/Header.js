@@ -30,9 +30,9 @@ class Header extends Component {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/products">
+                <Link className="nav-link" to="/products">
                   <img src="/media/glika.svg" alt="Γλυκά" title="glika" height="70" width="70" />
-                </a>
+                </Link>
               </li>
             </ul>
             </div>
