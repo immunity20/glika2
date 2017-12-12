@@ -1,12 +1,19 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
+import Hero from '../Hero';
+import ProductList from '../ProductList/ProductList';
 
 const Home = () => (
   <div>
-    <div> Home componentss </div>
-    <button onClick={() => console.log('hit here')}>Press me! </button>
+    <Helmet>
+      <title> Τούρτα Γενεθλίων, Γλυκά βάπτισης γάμου - Το Σταρένιο</title>
+    </Helmet>
+    <Hero />
+    <ProductList.component />
   </div>
 );
 
 export default {
+  loadData: ProductList.loadData,
   component: Home,
 };

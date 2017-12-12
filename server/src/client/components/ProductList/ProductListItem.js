@@ -14,7 +14,7 @@ class ProductListItem extends Component {
     return (
       <div className="card p-2 my-3">
         <Link to={`/product/${product.slug}`}>
-          <img className="card-img-top" src={product.img} alt={product.title} />
+          <img className="card-img-top" src={product.thumbnail} alt={product.title} />
         </Link>
         <div className="card-block">
           <Link to={`/product/${product.slug}`}>

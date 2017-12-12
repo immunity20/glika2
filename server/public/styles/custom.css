@@ -12,6 +12,10 @@
 body {
   background:#fff999;
 }
+#hero img {
+  height:auto;
+  width:100%;
+}
 
 .btn-warning {
   background-color:rgb(237, 108, 22) !important;

@@ -9,12 +9,21 @@ import Product from '../models/Product';
  * @returns void
  */
 export function getProducts(req, res) {
-  Product.find().sort('-dateAdded').exec((err, products) => {
-    if (err) {
-      res.status(500).send(err);
-    }
-    res.send(products);
-  });
+  if (!req.params.category) {
+    Product.find().sort('-dateAdded').exec((err, products) => {
+      if (err) {
+        res.status(500).send(err);
+      }
+      res.send(products);
+    });
+  } else { //  Rule use _ instead of space in req (space(%20) to _ for human better urls)
+    Product.find({ category: req.params.category.split('-').join(' ') }).sort('-dateAdded').exec((err, products) => {
+      if (err) {
+        res.status(500).send(err);
+      }
+      res.send(products);
+    });
+  }
 }
 
 /**

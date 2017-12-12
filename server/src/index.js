@@ -9,6 +9,7 @@ import renderer from './helpers/renderer';
 import createStore from './helpers/createStore';
 
 const app = express();
+
 app.use(compression());
 //  proxy on server renderer to api server
 app.use('/api', proxy('http://localhost:7070/', {
